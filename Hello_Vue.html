@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+        background: green;
+        width: 300px;
+        height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1 v-if="auth"> Your profile is authenticated</h1>
+    <h1 v-else> Log in to get access courses</h1>
+
+    <h1>{{ lesson }}</h1>
+    <br>
+    <h2>Counter: {{counter}}</h2>
+    <!--<a :href="link">Website</a>-->
+
+    <br><br>
+    <button v-on:click="CounterIncrement">Counter ++ </button>
+
+    <br><br>
+
+    <!--&lt;!&ndash;<div class = "box" @mouseover="OverBox">&ndash;&gt;</div>-->
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

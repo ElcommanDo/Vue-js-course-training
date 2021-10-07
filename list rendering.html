@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <div class="card" v-for="user in users" :key="user.id">
+        <div class="card-body">
+            {{user.id}}
+            <br>
+
+            {{user.name}}
+            <br>
+            {{user.profession}}
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="list rendering.js"></script>
+</body>
+</html>

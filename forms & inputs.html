@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div id="app">
+    <div  class="row justify-content-center mt-3">
+        <div class="col-md-6">
+            <textarea class="form-control" v-model="message" rows="5"></textarea>
+        </div>
+        <div class="col-md-6">
+       <p> {{message}}</p>
+
+        </div>
+    </div>
+    <br><br>
+<div class="row justify-content-center mt-3">
+    <p v-if="error"> {{error}}</p>
+    <form @submit.prevent="OnSubmit">
+        <div class="form-group">
+            <textarea class="form-control mt-3" placeholder="Enter Comment" v-model="comment"></textarea>
+        <button class="btn btn-sm btn-primary" type="submit">Comemnt</button>
+        </div>
+    </form>
+</div>
+    <br><br>
+    <div  class="container">
+        <div class="card" v-for="comment in comments">
+            <div class="card-body">
+                {{comment}}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="v-models.js"></script>
+
+</body>
+</html>

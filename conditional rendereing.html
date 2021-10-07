@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<h1>{{lesson}}</h1>
+<h2>product: {{product}}</h2>
+<h3 v-if="quantity >=20">Available </h3>
+<h3 v-else-if="quantity > 0 && quantity < 20">Limited Available </h3>
+<h3 v-else>sold out ! </h3>
+<br>
+<h3 v-show="sale">Sale On !</h3>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
